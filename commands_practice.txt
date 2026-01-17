@@ -1,0 +1,20 @@
+Day 1 commands practiced and their explanation:
+
+pwd
+- Prints the current working directory.
+- It helps us understand where we are in the filesystem.
+
+ls
+- Lists files and directories present inside the current directory.
+– Used to check the contents of a folder.
+
+whoami
+- Shows the currently logged in user.
+- Useful for checking user permissions.
+
+date
+- Displays current system date and time. Timestamps. Used for time verification, logging.
+
+uname -a
+- Shows the system information.
+- Shows kernel name and version as well as system architecture.
