@@ -1,0 +1,29 @@
+DAY 1 – LINUX INTRODUCTION
+
+What is Linux?
+Linux is an open-source operating system, which runs mostly on servers,
+cloud platforms, and DevOps environments.
+
+Reasons why the Linux operating system is significant
+- Stable
+- Secure
+- Free and Open-Source
+- For servers and the cloud
+
+Linux vs Windows (Basic)
+Linux:
+- Mostly command-line
+- For servers
+- Open-source
+
+Windows:
+- GUI-Based
+- Used on personal computers
+- Licensed
+
+Terminal commands learned:
+pwd 
+ls 
+whoami 
+Date 
+uname -a
