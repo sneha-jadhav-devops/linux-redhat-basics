@@ -1,0 +1,82 @@
+DAY 2 – COMMANDS PRACTICE
+
+1. cd (Change Directory)
+Used to move between directories in the Linux filesystem.
+
+Examples:
+cd /home/user        → Move to absolute path
+cd Documents         → Move to a folder inside current directory
+cd ..                → Move one directory back
+cd ~                 → Move to home directory
+
+DevOps use case:
+Used to navigate to application folders, log directories,
+or configuration paths on servers.
+
+
+2. mkdir (Make Directory)
+Creates one or more directories.
+
+Examples:
+mkdir logs            → Create a directory named logs
+mkdir app config      → Create multiple directories
+mkdir -p app/logs     → Create parent and child directories together
+
+DevOps use case:
+Used to create folders for applications, logs, backups,
+and deployment files.
+
+
+3. touch
+Creates empty files or updates file timestamps.
+
+Examples:
+touch app.log
+touch config.yml
+
+DevOps use case:
+Used to create configuration files, log files,
+shell scripts, or placeholder files.
+
+
+4. cp (Copy)
+Copies files or directories from one location to another.
+
+Examples:
+cp file.txt backup.txt         → Copy file
+cp file.txt /backup/           → Copy file to another directory
+cp -r app /backup/app          → Copy directory recursively
+
+DevOps use case:
+Used to take backups of configuration files,
+application code, and important data.
+
+
+5. mv (Move / Rename)
+Moves or renames files and directories.
+
+Examples:
+mv old.txt new.txt             → Rename file
+mv app.log /logs/              → Move file to another directory
+mv app old_app                 → Rename directory
+
+DevOps use case:
+Used during deployments, renaming builds,
+and organizing application files.
+
+
+6. rm (Remove)
+Deletes files and directories.
+
+Examples:
+rm file.txt                    → Delete file
+rm -r folder_name              → Delete directory and contents
+rm -rf folder_name             → Force delete without confirmation
+
+DevOps warning:
+Wrong usage can delete critical system files.
+Always double-check before running rm.
+
+DevOps use case:
+Used to clean old logs, remove unused files,
+or delete failed deployment data.
