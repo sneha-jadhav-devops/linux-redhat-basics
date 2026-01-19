@@ -1,0 +1,85 @@
+DAY 3 – FILE VIEWING, EDITING & LOG ANALYSIS
+
+Why file viewing and editing is important?
+DevOps engineers frequently read logs, edit configuration files,
+and troubleshoot issues directly on servers.
+
+Commands learned on Day 3:
+
+1. cat
+Displays the full content of a file.
+
+Example:
+cat app.log
+
+Use case:
+Best for small files.
+
+
+2. less
+Views file content page by page.
+
+Example:
+less app.log
+
+Useful shortcuts:
+- Space → next page
+- b → previous page
+- q → quit
+
+Use case:
+Best for large log files.
+
+
+3. head
+Shows the first few lines of a file.
+
+Example:
+head app.log
+head -n 5 app.log
+
+Use case:
+Quickly check file headers or start of logs.
+
+
+4. tail
+Shows the last few lines of a file.
+
+Example:
+tail app.log
+tail -n 10 app.log
+tail -f app.log
+
+Use case:
+Used to monitor logs in real-time.
+
+
+5. nano
+Simple terminal-based text editor.
+
+Example:
+nano config.txt
+
+Shortcuts:
+CTRL + O → Save
+CTRL + X → Exit
+
+Use case:
+Beginner-friendly file editing.
+
+
+6. vi / vim
+Advanced text editor used in servers.
+
+Example:
+vi config.txt
+
+Basic modes:
+- i → Insert mode
+- Esc → Command mode
+- :w → Save
+- :q → Quit
+- :wq → Save and quit
+
+Use case:
+Most production servers use vi/vim.
