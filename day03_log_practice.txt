@@ -1,0 +1,21 @@
+DAY 3 – LOG PRACTICE
+
+Logs are records of system and application activity.
+They are used to debug issues and monitor systems.
+
+Common DevOps log tasks:
+
+- View full log:
+cat app.log
+
+- View large log safely:
+less app.log
+
+- Check recent activity:
+tail app.log
+
+- Monitor live logs:
+tail -f app.log
+
+- Check starting lines:
+head app.log
