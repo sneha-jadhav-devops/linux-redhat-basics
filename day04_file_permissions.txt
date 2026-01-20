@@ -1,0 +1,17 @@
+DAY 4 – FILE PERMISSIONS & OWNERSHIP
+
+Why permissions are important?
+In Linux, every file and directory has permissions that control
+who can read, write, or execute them.
+
+Incorrect permissions are one of the most common reasons why:
+- Applications fail to start
+- Deployments break
+- Scripts show “Permission denied”
+- Security vulnerabilities occur
+
+DevOps engineers must understand permissions to:
+- Secure servers and applications
+- Ensure services run correctly
+- Prevent unauthorized access
+- Fix production issues quickly
