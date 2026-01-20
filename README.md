@@ -1,15 +1,52 @@
-# linux-redhat-basics
-Linux and Red Hat basics learning – daily practice and notes
+# Linux & Red Hat Basics – DevOps Learning
 
-# Basics of Linux and Red Hat
+This repository documents my daily learning and hands-on practice
+of Linux and Red Hat fundamentals as part of my DevOps journey.
 
-As part of my DevOps journey, I study Linux and Red Hat every day and practise what I learn.
+I am starting from scratch and building strong Linux fundamentals
+required for real-world DevOps and cloud environments.
 
+---
 
-I'm starting from scratch and will add theory, commands, and hands-on practice to this repository every day.
-Day 1: Getting Started with Linux
-- What is Linux?
+## 📘 Learning Progress
+
+### Day 1: Linux Introduction
+- What is Linux
 - Why Linux is used on servers
-- A simple comparison of Linux and Windows
-- How to use a terminal
-- First commands for Linux
+- Linux vs Windows
+- Basic commands: pwd, ls, whoami, date, uname -a
+
+### Day 2: File & Directory Management
+- cd, mkdir, rmdir
+- touch, cp, mv, rm
+- Real-world file handling scenarios
+
+### Day 3: File Viewing, Editing & Log Analysis
+- Viewing files: cat, less, head, tail
+- Editing files: nano, vi/vim
+- Log monitoring and troubleshooting
+
+### Day 4: File Permissions & Ownership
+- Understanding r, w, x permissions
+- chmod (numeric and symbolic)
+- chown (ownership management)
+- Fixing permission denied issues
+
+---
+
+## 🛠 Tools & Technologies
+- Linux (Red Hat based)
+- Git & GitHub
+- Terminal / CLI
+
+---
+
+## 🎯 Goal
+To become confident in Linux system usage and troubleshooting
+required for DevOps engineers.
+
+---
+
+## 📌 Note
+This repository is updated daily with structured notes and
+hands-on practice.
