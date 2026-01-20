@@ -1,0 +1,95 @@
+DAY 4 – PERMISSIONS PRACTICE
+
+
+1. View file permissions using ls -l
+
+Command:
+ls -l
+
+What it does:
+Displays file permissions, owner, group, size, and modification time.
+
+Example output:
+-rw-r--r-- 1 user devops 1200 app.conf
+
+Explanation:
+- Owner can read and write
+- Group can read
+- Others can read
+
+DevOps use case:
+Used to identify permission issues when applications fail.
+
+
+2. Change permissions using chmod
+
+Command:
+chmod permissions filename
+
+Numeric values:
+4 → read
+2 → write
+1 → execute
+
+Example:
+chmod 644 app.conf
+
+Meaning:
+Owner → read, write
+Group → read
+Others → read
+
+DevOps use case:
+Securing configuration files and preventing unauthorized edits.
+
+
+3. Make scripts executable
+
+Problem:
+Script shows "Permission denied" when executed.
+
+Check permissions:
+ls -l deploy.sh
+
+Fix:
+chmod +x deploy.sh
+
+Run script:
+./deploy.sh
+
+DevOps use case:
+Required to run deployment, backup, and automation scripts.
+
+
+4. Change file ownership using chown
+
+Command:
+chown user filename
+chown user:group filename
+
+Example:
+chown root:root app.conf
+
+DevOps use case:
+Ensuring files are owned by the correct user or service
+to allow applications to access required files.
+
+
+5. Fix permission denied issues
+
+Common error:
+Permission denied
+
+Steps to fix:
+1. Check permissions using ls -l
+2. Check ownership using ls -l
+3. Modify permissions using chmod
+4. Modify ownership using chown
+
+Example:
+ls -l app.conf
+chmod 644 app.conf
+chown appuser:appgroup app.conf
+
+DevOps use case:
+Daily troubleshooting task in production environments.
