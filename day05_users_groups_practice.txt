@@ -1,0 +1,26 @@
+DAY 5 – USERS & GROUPS PRACTICE
+
+1. Check current user:
+whoami
+
+2. View user ID and groups:
+id
+
+3. Create a new user:
+useradd devuser
+passwd devuser
+
+4. Create a group:
+groupadd devops
+
+5. Add user to group:
+usermod -aG devops devuser
+
+6. Verify group membership:
+groups devuser
+
+7. Grant sudo access:
+usermod -aG wheel devuser   (RHEL/CentOS)
+
+8. Run admin command:
+sudo yum update
