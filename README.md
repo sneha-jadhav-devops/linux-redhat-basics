@@ -50,3 +50,9 @@ required for DevOps engineers.
 ## 📌 Note
 This repository is updated daily with structured notes and
 hands-on practice.
+
+### Day 5: Users, Groups & Sudo
+- Linux users and system users
+- Group management
+- sudo vs su
+- Least privilege principle
