@@ -1,0 +1,150 @@
+DAY 5 – LINUX USERS, GROUPS & SUDO
+
+Why users and groups are important?
+Linux is a multi-user operating system.
+Different users and services must have controlled access
+to files, processes, and system resources.
+
+Running everything as root is dangerous.
+DevOps engineers follow the principle of least privilege.
+
+---
+
+1. Types of Users in Linux
+
+Root user:
+- Username: root
+- User ID (UID): 0
+- Full system access
+
+Normal users:
+- Created for human users
+- Limited permissions
+
+System users:
+- Used by services and applications
+- Examples: nginx, apache, mysql
+
+---
+
+2. User Information Files
+
+/etc/passwd
+Stores user account information
+
+/etc/shadow
+Stores encrypted passwords (root access only)
+
+/etc/group
+Stores group information
+
+---
+
+3. Viewing User Information
+
+Commands:
+whoami
+id
+groups
+
+Use case:
+Used to identify current user and group membership.
+
+---
+
+4. Creating Users
+
+Command:
+useradd username
+passwd username
+
+Example:
+useradd devuser
+passwd devuser
+
+DevOps use case:
+Creating separate users for applications and services.
+
+---
+
+5. Deleting Users
+
+Command:
+userdel username
+
+Example:
+userdel devuser
+
+---
+
+6. Groups in Linux
+
+Why groups are used?
+Groups simplify permission management.
+
+Commands:
+groupadd groupname
+groupdel groupname
+usermod -aG group user
+
+Example:
+groupadd devops
+usermod -aG devops devuser
+
+---
+
+7. sudo (Super User Do)
+
+What is sudo?
+Allows a normal user to execute commands as root.
+
+Command:
+sudo command
+
+Example:
+sudo yum update
+
+Why sudo is important?
+- Avoids logging in as root
+- Improves security
+- Logs commands
+
+---
+
+8. su vs sudo
+
+su:
+Switches to another user (usually root)
+
+sudo:
+Runs single command as root
+
+DevOps best practice:
+Use sudo instead of su.
+
+---
+
+9. REAL DEVOPS SCENARIOS
+
+Scenario 1:
+Application needs permission to read a directory.
+
+Fix:
+- Create user
+- Assign group
+- Set permissions
+
+Scenario 2:
+User needs admin access without root login.
+
+Fix:
+- Add user to sudoers group
+
+---
+
+10. Best Practices
+
+- Never run apps as root
+- Use sudo for admin tasks
+- Assign least privileges
+- Use groups for access control
