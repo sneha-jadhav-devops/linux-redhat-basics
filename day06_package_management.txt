@@ -1,0 +1,185 @@
+DAY 6 – PACKAGE MANAGEMENT (YUM / DNF)
+
+Why package management is important?
+In Linux, software is installed using package managers.
+DevOps engineers must install, update, and manage software
+on servers in a secure and controlled way.
+
+Manually installing software is risky and not scalable.
+
+---
+
+1. What is a Package?
+A package is a compressed file that contains:
+- Application files
+- Configuration files
+- Dependencies
+- Metadata
+
+Examples:
+nginx, httpd, git, docker
+
+---
+
+2. What is a Package Manager?
+A package manager:
+- Installs software
+- Resolves dependencies
+- Updates packages
+- Removes software safely
+
+RHEL-based package managers:
+- yum (older)
+- dnf (newer, faster)
+
+---
+
+3. YUM vs DNF
+
+yum:
+- Older package manager
+- Used in CentOS 7 / RHEL 7
+
+dnf:
+- Default in RHEL 8+
+- Faster and better dependency handling
+
+In most systems, yum is linked to dnf.
+
+---
+
+4. Package Repositories
+
+What is a repository?
+A repository is a remote server that stores packages.
+
+Types:
+- BaseOS
+- AppStream
+- EPEL (Extra Packages)
+
+Repo files location:
+/etc/yum.repos.d/
+
+---
+
+5. Searching Packages
+
+Command:
+yum search package_name
+
+Example:
+yum search nginx
+
+Use case:
+Find correct package name before installation.
+
+---
+
+6. Installing Packages
+
+Command:
+yum install package_name
+
+Example:
+yum install nginx
+
+Flags:
+-y → auto yes
+
+Example:
+yum install -y git
+
+---
+
+7. Removing Packages
+
+Command:
+yum remove package_name
+
+Example:
+yum remove nginx
+
+Use case:
+Cleanly uninstall software.
+
+---
+
+8. Updating Packages
+
+Update all packages:
+yum update
+
+Update specific package:
+yum update nginx
+
+DevOps best practice:
+Regular updates for security patches.
+
+---
+
+9. Package Information
+
+Command:
+yum info package_name
+
+Example:
+yum info httpd
+
+Shows:
+- Version
+- Size
+- Repository
+- Description
+
+---
+
+10. List Installed Packages
+
+Command:
+yum list installed
+
+Check specific package:
+yum list installed | grep nginx
+
+---
+
+11. Cleaning Cache
+
+Command:
+yum clean all
+
+Use case:
+Fix cache-related issues.
+
+---
+
+12. Real DevOps Scenarios
+
+Scenario 1:
+Package installation fails due to dependency issue.
+
+Fix:
+yum clean all
+yum install package
+
+Scenario 2:
+Server missing git.
+
+Fix:
+yum install git
+
+Scenario 3:
+Need specific version.
+
+Fix:
+yum list available | grep package
+
+---
+
+13. Best Practices
+
+- Use official repositories
+- Avoid manual rpm installs
+- Keep systems updated
+- Use -y cautiously
