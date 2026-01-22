@@ -1,0 +1,25 @@
+DAY 6 – PACKAGE MANAGEMENT PRACTICE
+
+1. Search a package:
+yum search nginx
+
+2. View package info:
+yum info nginx
+
+3. Install a package:
+sudo yum install -y nginx
+
+4. Verify installation:
+rpm -qa | grep nginx
+
+5. Update package:
+sudo yum update nginx
+
+6. Remove package:
+sudo yum remove nginx
+
+7. Clean yum cache:
+sudo yum clean all
+
+8. List installed packages:
+yum list installed
