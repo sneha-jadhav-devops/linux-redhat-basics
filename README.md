@@ -56,3 +56,9 @@ hands-on practice.
 - Group management
 - sudo vs su
 - Least privilege principle
+
+### Day 6: Package Management
+- yum and dnf package managers
+- Installing, updating, and removing software
+- Package repositories
+- Real-world DevOps scenarios
