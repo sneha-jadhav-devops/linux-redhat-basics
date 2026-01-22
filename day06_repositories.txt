@@ -1,0 +1,16 @@
+DAY 6 – PACKAGE REPOSITORIES
+
+Repository files location:
+/etc/yum.repos.d/
+
+Repo file extension:
+.repo
+
+Each repo contains:
+- name
+- baseurl
+- enabled
+- gpgcheck
+
+DevOps engineers often add custom repositories
+for tools like Docker and Kubernetes.
