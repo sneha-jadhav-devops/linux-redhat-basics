@@ -1,0 +1,25 @@
+DAY 7 – SYSTEM SERVICES PRACTICE
+
+1. Check SSH service:
+systemctl status sshd
+
+2. Install nginx (if not installed):
+sudo yum install -y nginx
+
+3. Start nginx service:
+sudo systemctl start nginx
+
+4. Check nginx status:
+systemctl status nginx
+
+5. Enable nginx on boot:
+sudo systemctl enable nginx
+
+6. Restart nginx:
+sudo systemctl restart nginx
+
+7. View nginx logs:
+journalctl -u nginx
+
+8. Stop nginx service:
+sudo systemctl stop nginx
