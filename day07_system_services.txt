@@ -1,0 +1,152 @@
+DAY 7 – SYSTEM SERVICES & SYSTEMCTL
+
+Why services are important?
+Linux servers run applications in the background as services.
+Examples include web servers, databases, and monitoring agents.
+
+DevOps engineers manage services to ensure applications
+start, stop, restart, and recover properly.
+
+---
+
+1. What is a Service?
+A service (daemon) is a program that runs in the background.
+
+Examples:
+- nginx (web server)
+- sshd (remote access)
+- crond (scheduled tasks)
+
+Service processes usually end with 'd'.
+
+---
+
+2. What is systemd?
+systemd is the system and service manager in modern Linux.
+
+It handles:
+- Service startup
+- Boot process
+- Logging
+- Dependency management
+
+Command tool:
+systemctl
+
+---
+
+3. Checking Service Status
+
+Command:
+systemctl status service_name
+
+Example:
+systemctl status nginx
+
+Shows:
+- Running or stopped
+- PID
+- Logs
+- Errors
+
+---
+
+4. Starting and Stopping Services
+
+Start a service:
+systemctl start nginx
+
+Stop a service:
+systemctl stop nginx
+
+Restart a service:
+systemctl restart nginx
+
+Reload configuration:
+systemctl reload nginx
+
+---
+
+5. Enable & Disable Services at Boot
+
+Enable service:
+systemctl enable nginx
+
+Disable service:
+systemctl disable nginx
+
+Check enable status:
+systemctl is-enabled nginx
+
+DevOps use case:
+Ensure services start automatically after reboot.
+
+---
+
+6. List Services
+
+List all services:
+systemctl list-units --type=service
+
+List active services:
+systemctl list-units --type=service --state=running
+
+---
+
+7. Service Log Analysis
+
+View logs:
+journalctl -u nginx
+
+Live logs:
+journalctl -u nginx -f
+
+Use case:
+Debug service failures.
+
+---
+
+8. Common Service Failures
+
+Service fails to start:
+- Configuration error
+- Port already in use
+- Permission issue
+
+Fix steps:
+1. systemctl status service
+2. journalctl -u service
+3. Fix config
+4. Restart service
+
+---
+
+9. Real DevOps Scenarios
+
+Scenario 1:
+Web server not accessible after reboot.
+
+Fix:
+systemctl enable nginx
+
+Scenario 2:
+Service crashes after config change.
+
+Fix:
+systemctl restart nginx
+Check logs.
+
+Scenario 3:
+Service not starting.
+
+Fix:
+Check permissions and logs.
+
+---
+
+10. Best Practices
+
+- Always enable critical services
+- Check logs before restarting
+- Reload configs when possible
+- Monitor service health
