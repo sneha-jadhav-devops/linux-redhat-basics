@@ -1,0 +1,14 @@
+DAY 7 – SYSTEMD SERVICE UNIT FILES
+
+Service unit files define how services run.
+
+Location:
+/usr/lib/systemd/system/
+/etc/systemd/system/
+
+Unit file sections:
+[Unit]
+[Service]
+[Install]
+
+DevOps engineers edit unit files to customize services.
