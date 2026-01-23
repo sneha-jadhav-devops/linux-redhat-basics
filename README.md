@@ -62,3 +62,9 @@ hands-on practice.
 - Installing, updating, and removing software
 - Package repositories
 - Real-world DevOps scenarios
+
+### Day 7: System Services & systemctl
+- Linux services and daemons
+- Managing services using systemctl
+- Enabling services on boot
+- Service troubleshooting
