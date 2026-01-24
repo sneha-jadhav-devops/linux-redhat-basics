@@ -1,0 +1,14 @@
+DAY 8 – NETWORK TROUBLESHOOTING
+
+Common networking issues:
+- No IP assigned
+- Wrong gateway
+- DNS failure
+- Firewall blocking traffic
+
+Troubleshooting order:
+1. Check interface (ip a)
+2. Check connectivity (ping)
+3. Check ports (ss)
+4. Check service
+5. Check firewall
