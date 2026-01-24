@@ -68,3 +68,9 @@ hands-on practice.
 - Managing services using systemctl
 - Enabling services on boot
 - Service troubleshooting
+
+### Day 8: Linux Networking Basics
+- IP addresses and interfaces
+- Ports and services
+- Connectivity testing
+- Networking troubleshooting
