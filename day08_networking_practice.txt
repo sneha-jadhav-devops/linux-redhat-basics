@@ -1,0 +1,25 @@
+DAY 8 – NETWORKING PRACTICE
+
+1. Check IP address:
+ip addr
+
+2. Check active interfaces:
+ip link
+
+3. Test connectivity:
+ping -c 4 google.com
+
+4. Check open ports:
+ss -tuln
+
+5. Check service port mapping:
+ss -tulpn
+
+6. Test web service:
+curl http://localhost
+
+7. Check hostname:
+hostname
+
+8. Check DNS resolution:
+nslookup google.com
