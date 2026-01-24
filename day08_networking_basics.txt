@@ -1,0 +1,161 @@
+DAY 8 – LINUX NETWORKING BASICS
+
+Why networking is important?
+In DevOps, applications run on servers that communicate
+over networks. Understanding networking is critical for
+deployments, monitoring, and troubleshooting.
+
+---
+
+1. What is Networking?
+Networking allows computers and servers to communicate
+with each other using IP addresses and ports.
+
+---
+
+2. IP Address
+
+An IP address uniquely identifies a system on a network.
+
+Types:
+- IPv4 (example: 192.168.1.10)
+- IPv6 (newer format)
+
+---
+
+3. Network Interfaces
+
+A network interface connects a system to a network.
+
+Examples:
+eth0, ens33, wlan0
+
+---
+
+4. Check IP Address
+
+Commands:
+ip addr
+ip a
+
+Older command:
+ifconfig (deprecated)
+
+Use case:
+Verify system IP configuration.
+
+---
+
+5. Check Network Connectivity
+
+ping:
+Tests network connectivity.
+
+Example:
+ping google.com
+ping 8.8.8.8
+
+Use case:
+Check if server can reach network or internet.
+
+---
+
+6. Ports and Services
+
+What is a port?
+A port is a communication endpoint for services.
+
+Examples:
+- 22 → SSH
+- 80 → HTTP
+- 443 → HTTPS
+
+One IP can host multiple services using ports.
+
+---
+
+7. Check Open Ports
+
+Command:
+ss -tuln
+
+Older command:
+netstat -tuln
+
+Use case:
+Check which services are listening.
+
+---
+
+8. Check Service Port Mapping
+
+Command:
+ss -tulpn
+
+Shows:
+- Port number
+- Service name
+- PID
+
+---
+
+9. curl Command
+
+curl is used to test web services.
+
+Example:
+curl http://localhost
+curl http://127.0.0.1
+
+Use case:
+Check if web server is responding.
+
+---
+
+10. wget Command
+
+Used to download files.
+
+Example:
+wget http://example.com/file.txt
+
+---
+
+11. Hostname and DNS
+
+Check hostname:
+hostname
+
+DNS resolution:
+nslookup google.com
+dig google.com
+
+---
+
+12. Real DevOps Scenarios
+
+Scenario 1:
+Website not accessible.
+
+Check:
+- Service running
+- Port open
+- Firewall
+- Network connectivity
+
+Scenario 2:
+Server cannot reach internet.
+
+Check:
+- IP address
+- Gateway
+- DNS
+
+---
+
+13. Best Practices
+
+- Know common ports
+- Use ss instead of netstat
+- Test locally with curl
+- Always verify connectivity
