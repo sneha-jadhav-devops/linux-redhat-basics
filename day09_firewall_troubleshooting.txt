@@ -1,0 +1,14 @@
+DAY 9 – FIREWALL TROUBLESHOOTING
+
+Common firewall issues:
+- Port not allowed
+- Rule not permanent
+- Wrong zone
+- Firewall service stopped
+
+Troubleshooting steps:
+1. Check firewalld status
+2. List active rules
+3. Verify zone
+4. Reload firewall
+5. Test connectivity
