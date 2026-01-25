@@ -32,25 +32,6 @@ required for real-world DevOps and cloud environments.
 - chown (ownership management)
 - Fixing permission denied issues
 
----
-
-## 🛠 Tools & Technologies
-- Linux (Red Hat based)
-- Git & GitHub
-- Terminal / CLI
-
----
-
-## 🎯 Goal
-To become confident in Linux system usage and troubleshooting
-required for DevOps engineers.
-
----
-
-## 📌 Note
-This repository is updated daily with structured notes and
-hands-on practice.
-
 ### Day 5: Users, Groups & Sudo
 - Linux users and system users
 - Group management
@@ -74,3 +55,31 @@ hands-on practice.
 - Ports and services
 - Connectivity testing
 - Networking troubleshooting
+
+### Day 9: Firewall & Security Basics
+- firewalld concepts
+- Zones and rules
+- Allowing services and ports
+- Firewall troubleshooting
+
+
+
+---
+
+## 🛠 Tools & Technologies
+- Linux (Red Hat based)
+- Git & GitHub
+- Terminal / CLI
+
+  
+---
+
+## 🎯 Goal
+To become confident in Linux system usage and troubleshooting
+required for DevOps engineers.
+
+---
+
+## 📌 Note
+This repository is updated daily with structured notes and
+hands-on practice.
