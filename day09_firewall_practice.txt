@@ -1,0 +1,28 @@
+DAY 9 – FIREWALL PRACTICE
+
+1. Check firewalld status:
+systemctl status firewalld
+
+2. Start firewalld (if stopped):
+sudo systemctl start firewalld
+
+3. Check firewall state:
+firewall-cmd --state
+
+4. List current rules:
+firewall-cmd --list-all
+
+5. Allow HTTP service:
+sudo firewall-cmd --add-service=http --permanent
+
+6. Allow HTTPS service:
+sudo firewall-cmd --add-service=https --permanent
+
+7. Allow custom port:
+sudo firewall-cmd --add-port=8080/tcp --permanent
+
+8. Reload firewall:
+sudo firewall-cmd --reload
+
+9. Verify rules:
+firewall-cmd --list-all
