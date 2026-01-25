@@ -1,0 +1,144 @@
+DAY 9 – FIREWALL & SECURITY BASICS
+
+Why firewall is important?
+A firewall controls incoming and outgoing network traffic.
+Even if a service is running, it will not be accessible
+unless the firewall allows it.
+
+DevOps engineers must configure firewalls to keep
+systems secure while allowing required services.
+
+---
+
+1. What is a Firewall?
+A firewall is a security system that:
+- Allows trusted traffic
+- Blocks unauthorized access
+
+---
+
+2. firewalld
+
+firewalld is the default firewall service in RHEL-based systems.
+It manages firewall rules dynamically.
+
+Service name:
+firewalld
+
+---
+
+3. Check Firewall Status
+
+Command:
+systemctl status firewalld
+
+Check firewall state:
+firewall-cmd --state
+
+---
+
+4. Zones in firewalld
+
+Zones define trust levels.
+
+Common zones:
+- public (default)
+- trusted
+- internal
+- external
+
+Check current zone:
+firewall-cmd --get-default-zone
+
+List zones:
+firewall-cmd --get-zones
+
+---
+
+5. List Firewall Rules
+
+Command:
+firewall-cmd --list-all
+
+List rules in a zone:
+firewall-cmd --zone=public --list-all
+
+---
+
+6. Allow Services
+
+Allow predefined service:
+firewall-cmd --add-service=http --permanent
+
+Allow HTTPS:
+firewall-cmd --add-service=https --permanent
+
+Reload firewall:
+firewall-cmd --reload
+
+---
+
+7. Allow Ports
+
+Allow port:
+firewall-cmd --add-port=8080/tcp --permanent
+
+Reload:
+firewall-cmd --reload
+
+---
+
+8. Remove Rules
+
+Remove service:
+firewall-cmd --remove-service=http --permanent
+
+Remove port:
+firewall-cmd --remove-port=8080/tcp --permanent
+
+Reload firewall.
+
+---
+
+9. Temporary vs Permanent Rules
+
+Temporary:
+Active until reboot
+
+Permanent:
+Survives reboot
+
+Best practice:
+Always use --permanent + reload.
+
+---
+
+10. Real DevOps Scenarios
+
+Scenario 1:
+Nginx running but site not accessible.
+
+Fix:
+- Check firewall
+- Allow HTTP/HTTPS
+
+Scenario 2:
+Custom app on port 8080 blocked.
+
+Fix:
+- Allow port 8080
+
+Scenario 3:
+Service accessible internally but not externally.
+
+Fix:
+- Check zone and firewall rules
+
+---
+
+11. Best Practices
+
+- Open only required ports
+- Use services instead of ports when possible
+- Always reload firewall
+- Regularly audit firewall rules
