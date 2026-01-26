@@ -1,0 +1,15 @@
+DAY 10 – SSH HARDENING
+
+Disable root login:
+PermitRootLogin no
+
+Allow specific users:
+AllowUsers devuser admin
+
+Change SSH port:
+Port 2222
+
+Limit authentication attempts:
+MaxAuthTries 3
+
+Restart SSH after changes.
