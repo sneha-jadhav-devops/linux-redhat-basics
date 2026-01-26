@@ -62,7 +62,11 @@ required for real-world DevOps and cloud environments.
 - Allowing services and ports
 - Firewall troubleshooting
 
-
+### Day 10: SSH & Secure Access
+- SSH architecture and usage
+- Key-based authentication
+- SSH security and hardening
+- Real-world troubleshooting
 
 ---
 
