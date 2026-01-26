@@ -1,0 +1,25 @@
+DAY 10 – SSH PRACTICE
+
+1. Check SSH service:
+systemctl status sshd
+
+2. Start SSH service:
+sudo systemctl start sshd
+
+3. Enable SSH on boot:
+sudo systemctl enable sshd
+
+4. Connect to remote server:
+ssh user@server_ip
+
+5. Generate SSH key:
+ssh-keygen
+
+6. Copy SSH key:
+ssh-copy-id user@server_ip
+
+7. Test passwordless login:
+ssh user@server_ip
+
+8. Restart SSH service:
+sudo systemctl restart sshd
