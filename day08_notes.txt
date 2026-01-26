@@ -1,0 +1,32 @@
+DAY 8 – PYTHON APIs FOR DEVOPS
+
+What is an API?
+API (Application Programming Interface) allows software to communicate with other software.
+
+Why APIs are important in DevOps?
+- Monitor services
+- Automate deployments
+- Fetch cloud/server data
+- Health checks
+- Integrate tools (AWS, Docker, Kubernetes, GitHub)
+
+HTTP Methods:
+GET  → Fetch data
+POST → Send data
+PUT  → Update data
+DELETE → Remove data
+
+HTTP Status Codes:
+200 → OK
+201 → Created
+400 → Bad Request
+401 → Unauthorized
+403 → Forbidden
+404 → Not Found
+500 → Server Error
+
+Python Library Used:
+requests
+
+Basic API Flow:
+Request → Response → Status Code → JSON Data
