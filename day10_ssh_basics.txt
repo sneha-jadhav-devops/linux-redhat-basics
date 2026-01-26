@@ -1,0 +1,155 @@
+DAY 10 – SSH & SECURE REMOTE ACCESS
+
+Why SSH is important?
+SSH (Secure Shell) is used to securely connect to remote servers.
+DevOps engineers use SSH daily to deploy, monitor, and troubleshoot systems.
+
+---
+
+1. What is SSH?
+SSH is a secure protocol that allows encrypted communication
+between a client and a server over a network.
+
+Default port:
+22
+
+---
+
+2. SSH Architecture
+
+Client:
+Your local machine
+
+Server:
+Remote Linux machine
+
+Service:
+sshd (SSH daemon)
+
+---
+
+3. Installing SSH
+
+Check if SSH is installed:
+rpm -qa | grep openssh
+
+Install SSH:
+sudo yum install -y openssh-server
+
+Start SSH service:
+sudo systemctl start sshd
+
+Enable SSH on boot:
+sudo systemctl enable sshd
+
+---
+
+4. Connecting to a Remote Server
+
+Command:
+ssh username@server_ip
+
+Example:
+ssh devuser@192.168.1.10
+
+---
+
+5. SSH Configuration File
+
+Server config file:
+/etc/ssh/sshd_config
+
+Client config file:
+~/.ssh/config
+
+---
+
+6. Password-Based Authentication
+
+Default authentication method.
+Not recommended for production.
+
+Risks:
+- Brute-force attacks
+- Weak passwords
+
+---
+
+7. Key-Based Authentication (RECOMMENDED)
+
+Why keys?
+- More secure
+- No passwords
+- Automation friendly
+
+Generate SSH key:
+ssh-keygen
+
+Key files:
+~/.ssh/id_rsa (private key)
+~/.ssh/id_rsa.pub (public key)
+
+---
+
+8. Copy Public Key to Server
+
+Command:
+ssh-copy-id username@server_ip
+
+Manual method:
+Add public key to:
+~/.ssh/authorized_keys
+
+---
+
+9. Disable Password Authentication (Security)
+
+Edit:
+vi /etc/ssh/sshd_config
+
+Set:
+PasswordAuthentication no
+
+Restart SSH:
+systemctl restart sshd
+
+---
+
+10. Change Default SSH Port (Optional)
+
+Edit:
+Port 2222
+
+Restart SSH.
+
+Note:
+Update firewall rules accordingly.
+
+---
+
+11. Real DevOps Scenarios
+
+Scenario 1:
+Cannot SSH into server.
+
+Check:
+- SSH service running
+- Firewall port allowed
+- Correct IP and user
+
+Scenario 2:
+Permission denied (publickey).
+
+Fix:
+- Check authorized_keys
+- Check file permissions
+
+---
+
+12. Best Practices
+
+- Use SSH keys
+- Disable root login
+- Change default port
+- Restrict users
+- Monitor SSH logs
