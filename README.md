@@ -68,6 +68,12 @@ required for real-world DevOps and cloud environments.
 - SSH security and hardening
 - Real-world troubleshooting
 
+### Day 11: Shell Scripting & Automation
+- Bash scripting fundamentals
+- Variables, conditions, loops
+- DevOps automation scripts
+- Service health monitoring
+
 ---
 
 ## 🛠 Tools & Technologies
