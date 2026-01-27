@@ -1,0 +1,179 @@
+DAY 11 – SHELL SCRIPTING (BASH)
+
+Why shell scripting is important?
+DevOps engineers automate repetitive tasks using scripts.
+Shell scripts reduce manual work, errors, and save time.
+
+Automation is a core DevOps responsibility.
+
+---
+
+1. What is a Shell?
+A shell is a command-line interpreter.
+It takes user commands and executes them.
+
+Common shells:
+- bash (most common)
+- sh
+- zsh
+
+---
+
+2. What is a Shell Script?
+A shell script is a file containing Linux commands
+executed sequentially.
+
+File extension:
+.sh
+
+---
+
+3. Shebang (#!)
+
+The first line of a script.
+
+Example:
+#!/bin/bash
+
+It tells the system which interpreter to use.
+
+---
+
+4. Creating and Running a Script
+
+Create file:
+touch script.sh
+
+Edit:
+nano script.sh
+
+Make executable:
+chmod +x script.sh
+
+Run:
+./script.sh
+or
+bash script.sh
+
+---
+
+5. Variables
+
+Syntax:
+variable_name=value
+
+Example:
+name="DevOps"
+echo $name
+
+Rules:
+- No spaces around =
+- Case-sensitive
+
+---
+
+6. User Input
+
+Read input:
+read variable
+
+Example:
+read username
+echo "Hello $username"
+
+---
+
+7. Arguments to Script
+
+Access arguments:
+$1, $2, $3
+
+Example:
+./script.sh nginx
+
+$1 → nginx
+
+---
+
+8. Conditional Statements (if)
+
+Syntax:
+if [ condition ]; then
+  commands
+fi
+
+Example:
+if [ -f file.txt ]; then
+  echo "File exists"
+fi
+
+Common conditions:
+-f → file exists
+-d → directory exists
+-e → exists
+
+---
+
+9. Loops
+
+For loop:
+for i in 1 2 3
+do
+  echo $i
+done
+
+While loop:
+while true
+do
+  echo "Running..."
+  sleep 5
+done
+
+---
+
+10. Functions
+
+Syntax:
+function_name() {
+  commands
+}
+
+Example:
+check_service() {
+  systemctl status nginx
+}
+
+---
+
+11. Exit Codes
+
+Every command returns an exit code.
+
+0 → success
+Non-zero → failure
+
+Check exit code:
+$?
+
+---
+
+12. Real DevOps Automation Examples
+
+Example 1:
+Check disk usage and alert.
+
+Example 2:
+Check service status and restart if down.
+
+Example 3:
+Backup files automatically.
+
+---
+
+13. Best Practices
+
+- Use comments
+- Use meaningful variable names
+- Validate inputs
+- Handle errors
+- Log outputs
