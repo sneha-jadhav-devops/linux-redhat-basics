@@ -1,0 +1,8 @@
+DAY 11 – SCRIPTING BEST PRACTICES
+
+- Always use #!/bin/bash
+- Use set -e for error handling
+- Use functions for reuse
+- Log script output
+- Avoid hardcoding values
+- Test scripts before production
