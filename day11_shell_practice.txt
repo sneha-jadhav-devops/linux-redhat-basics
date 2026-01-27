@@ -1,0 +1,45 @@
+DAY 11 – SHELL SCRIPTING PRACTICE
+
+1. Hello World script
+
+#!/bin/bash
+echo "Hello DevOps"
+
+---
+
+2. Variable example
+
+#!/bin/bash
+name="Sneha"
+echo "Welcome $name"
+
+---
+
+3. User input script
+
+#!/bin/bash
+echo "Enter your name:"
+read username
+echo "Hello $username"
+
+---
+
+4. Check if file exists
+
+#!/bin/bash
+if [ -f /etc/passwd ]; then
+  echo "File exists"
+else
+  echo "File not found"
+fi
+
+---
+
+5. Loop example
+
+#!/bin/bash
+for i in 1 2 3 4 5
+do
+  echo "Number $i"
+done
+
