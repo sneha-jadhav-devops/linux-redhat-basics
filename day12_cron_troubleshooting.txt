@@ -1,0 +1,14 @@
+DAY 12 – CRON TROUBLESHOOTING
+
+Check cron service:
+systemctl status crond
+
+Check cron logs:
+journalctl -u crond
+
+Common fixes:
+- Use absolute paths
+- Make script executable
+- Check permissions
+- Add logging
+- Verify user crontab
