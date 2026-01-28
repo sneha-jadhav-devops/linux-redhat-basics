@@ -1,0 +1,205 @@
+DAY 11 – SHELL SCRIPTING (BASH) – DETAILED
+
+Why shell scripting matters in DevOps?
+DevOps engineers automate server tasks like deployments,
+health checks, backups, log cleanup, and monitoring.
+Shell scripting is the fastest way to automate Linux systems.
+
+---
+
+1. What Happens When You Run a Command?
+- Shell reads command
+- Finds binary/script
+- Executes it
+- Returns exit code
+
+Scripts automate this process.
+
+---
+
+2. Script Structure
+
+Basic script format:
+
+#!/bin/bash
+# This is a comment
+command1
+command2
+
+#!/bin/bash → mandatory (shebang)
+
+---
+
+3. Comments
+
+Single line comment:
+# This is a comment
+
+Use comments to explain:
+- Why something is done
+- Not what is obvious
+
+---
+
+4. Variables (Deep)
+
+Syntax:
+VAR=value
+
+Access:
+$VAR
+
+Example:
+APP="nginx"
+echo "Service is $APP"
+
+Rules:
+- No spaces around =
+- Use uppercase for constants
+- Case-sensitive
+
+---
+
+5. Command Substitution
+
+Old style:
+`date`
+
+Modern style (recommended):
+$(date)
+
+Example:
+TODAY=$(date)
+echo $TODAY
+
+Used heavily in automation.
+
+---
+
+6. User Input & Arguments
+
+Read input:
+read variable
+
+Script arguments:
+$0 → script name
+$1 → first argument
+$2 → second argument
+
+Example:
+./script.sh nginx
+$1 = nginx
+
+---
+
+7. Conditional Statements (Advanced)
+
+Syntax:
+if [ condition ]; then
+  commands
+elif [ condition ]; then
+  commands
+else
+  commands
+fi
+
+Examples:
+-f → file exists
+-d → directory exists
+-z → empty variable
+-n → not empty
+
+---
+
+8. Logical Operators
+
+AND:
+&&
+
+OR:
+||
+
+Example:
+command && success
+command || failure
+
+Used for short automation logic.
+
+---
+
+9. Exit Codes & Error Handling
+
+Exit codes:
+0 → success
+1–255 → failure
+
+Check:
+echo $?
+
+Manual exit:
+exit 1
+
+DevOps scripts MUST check exit codes.
+
+---
+
+10. Loops (Real Usage)
+
+For loop:
+Used for lists, files, users.
+
+While loop:
+Used for monitoring and waiting.
+
+Example:
+while true
+do
+  sleep 5
+done
+
+---
+
+11. Functions (Reusable Code)
+
+Functions reduce repetition.
+
+Example:
+check_service() {
+  systemctl status nginx
+}
+
+Call:
+check_service
+
+---
+
+12. Logging in Scripts
+
+Redirect output:
+command > file
+command >> file
+
+Log example:
+echo "$(date) Service restarted" >> app.log
+
+Logging is critical in production.
+
+---
+
+13. Script Permissions
+
+Make executable:
+chmod +x script.sh
+
+Run:
+./script.sh
+
+---
+
+14. Common DevOps Use Cases
+
+- Service monitoring
+- Log cleanup
+- Backup automation
+- Disk usage alerts
+- User audits
