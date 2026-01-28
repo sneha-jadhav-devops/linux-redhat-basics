@@ -1,0 +1,44 @@
+DAY 11 – SHELL SCRIPTING PRACTICE (ADVANCED)
+
+1. Script to check disk usage
+
+#!/bin/bash
+df -h
+
+---
+
+2. Script to check free memory
+
+#!/bin/bash
+free -m
+
+---
+
+3. Script to check if directory exists
+
+#!/bin/bash
+DIR="/var/log"
+
+if [ -d $DIR ]; then
+  echo "Directory exists"
+else
+  echo "Directory not found"
+fi
+
+---
+
+4. Script with arguments
+
+#!/bin/bash
+echo "Service name: $1"
+systemctl status $1
+
+---
+
+5. Loop through users
+
+#!/bin/bash
+for user in $(cut -d: -f1 /etc/passwd)
+do
+  echo "User: $user"
+done
