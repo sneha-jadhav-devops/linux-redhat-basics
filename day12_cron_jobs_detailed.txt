@@ -1,0 +1,144 @@
+DAY 12 – CRON JOBS & TASK SCHEDULING
+
+Why cron jobs are important?
+Cron allows tasks to run automatically at scheduled times.
+DevOps engineers use cron for backups, log cleanup,
+health checks, monitoring, and reports.
+
+Automation without scheduling is incomplete.
+
+---
+
+1. What is Cron?
+Cron is a Linux time-based job scheduler.
+It runs commands or scripts automatically.
+
+Cron service:
+crond
+
+---
+
+2. crontab
+
+crontab = cron table
+Each user has their own crontab.
+
+List crontab:
+crontab -l
+
+Edit crontab:
+crontab -e
+
+Remove crontab:
+crontab -r
+
+---
+
+3. Cron Job Format (VERY IMPORTANT)
+
+Format:
+* * * * * command
+
+Fields:
+Minute (0–59)
+Hour (0–23)
+Day of Month (1–31)
+Month (1–12)
+Day of Week (0–7, Sunday)
+
+---
+
+4. Cron Examples
+
+Run every minute:
+* * * * * command
+
+Run daily at 2 AM:
+0 2 * * * command
+
+Run every Sunday:
+0 3 * * 0 command
+
+Run every 5 minutes:
+*/5 * * * * command
+
+---
+
+5. Special Keywords
+
+@reboot
+@daily
+@hourly
+@weekly
+@monthly
+
+Example:
+@reboot /script.sh
+
+---
+
+6. Cron Environment (IMPORTANT)
+
+Cron runs with limited environment.
+
+Common issues:
+- PATH not set
+- Script works manually but not in cron
+
+Solution:
+- Use full paths
+- Export variables inside script
+
+---
+
+7. Logging Cron Output
+
+Redirect output:
+command > output.log 2>&1
+
+Best practice:
+Always log cron jobs.
+
+---
+
+8. System-wide Cron
+
+System crontab:
+ /etc/crontab
+
+Cron directories:
+ /etc/cron.hourly
+ /etc/cron.daily
+ /etc/cron.weekly
+ /etc/cron.monthly
+
+Used for system maintenance.
+
+---
+
+9. Real DevOps Cron Use Cases
+
+- Backup automation
+- Disk cleanup
+- Log rotation
+- Service health checks
+- Report generation
+
+---
+
+10. Common Cron Issues
+
+- Wrong timing format
+- Script not executable
+- Permission issues
+- Missing PATH
+- No logging
+
+---
+
+11. Best Practices
+
+- Test script manually
+- Use absolute paths
+- Log output
+- Avoid running heavy jobs
