@@ -1,0 +1,19 @@
+DAY 12 – CRON JOBS PRACTICE
+
+1. List current cron jobs:
+crontab -l
+
+2. Edit cron jobs:
+crontab -e
+
+3. Run script every minute:
+* * * * * /home/user/script.sh
+
+4. Run backup daily at midnight:
+0 0 * * * /home/user/backup.sh
+
+5. Log output:
+0 1 * * * /home/user/backup.sh >> /var/log/backup.log 2>&1
+
+6. Run script on reboot:
+@reboot /home/user/startup.sh
