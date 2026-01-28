@@ -74,6 +74,13 @@ required for real-world DevOps and cloud environments.
 - DevOps automation scripts
 - Service health monitoring
 
+### Day 12: Cron Jobs & Scheduling (Advanced)
+- Cron and crontab deep concepts
+- Scheduling automation scripts
+- Logging and troubleshooting
+- Real DevOps monitoring use cases
+*/10 * * * * /home/user/day12_disk_usage_monitor.sh
+
 ---
 
 ## 🛠 Tools & Technologies
