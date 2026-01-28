@@ -1,0 +1,10 @@
+DAY 11 – PRODUCTION SCRIPTING BEST PRACTICES
+
+- Always validate inputs
+- Use exit codes properly
+- Log everything
+- Never hardcode secrets
+- Use functions
+- Test scripts with set -x
+- Use set -e for strict error handling
+- Keep scripts idempotent
