@@ -81,6 +81,12 @@ required for real-world DevOps and cloud environments.
 - Real DevOps monitoring use cases
 */10 * * * * /home/user/day12_disk_usage_monitor.sh
 
+### Day 13: Log Management & Log Rotation
+- Linux log structure
+- Log analysis commands
+- logrotate configuration
+- Disk safety automation
+
 ---
 
 ## 🛠 Tools & Technologies
