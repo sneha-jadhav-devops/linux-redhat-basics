@@ -1,0 +1,20 @@
+DAY 14 – MONITORING TROUBLESHOOTING
+
+High CPU:
+- Check top
+- Identify process
+- Restart or kill
+
+High memory:
+- Check free
+- Investigate memory leaks
+- Add swap or scale
+
+Disk full:
+- Clean logs
+- Remove temp files
+- Expand disk
+
+Load average high:
+- CPU bound or IO wait
+- Check iostat and top
