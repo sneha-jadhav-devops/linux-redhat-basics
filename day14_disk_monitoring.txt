@@ -1,0 +1,31 @@
+DAY 14 – DISK MONITORING
+
+1. Disk usage:
+df -h
+
+---
+
+2. Directory size:
+du -sh /var/*
+du -sh *
+
+---
+
+3. Find large files:
+find / -type f -size +1G
+
+---
+
+4. Inode usage:
+df -i
+
+---
+
+5. Disk IO:
+iostat
+
+---
+
+6. Mounted disks:
+lsblk
+mount
