@@ -1,0 +1,15 @@
+DAY 13 – LOG TROUBLESHOOTING
+
+Disk full due to logs:
+- Check /var/log size
+- Rotate logs
+- Remove old logs
+
+logrotate not working:
+- Run logrotate manually
+- Check syntax
+- Verify cron
+
+Commands:
+logrotate -d /etc/logrotate.conf
+logrotate -f /etc/logrotate.conf
