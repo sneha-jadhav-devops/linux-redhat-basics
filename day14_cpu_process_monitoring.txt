@@ -1,0 +1,46 @@
+DAY 14 – CPU & PROCESS MONITORING
+
+1. top
+Real-time system monitoring.
+
+Shows:
+CPU usage
+Memory usage
+Running processes
+
+Shortcuts:
+P → sort by CPU
+M → sort by memory
+q → quit
+
+---
+
+2. htop (if installed)
+Enhanced top with UI.
+
+---
+
+3. ps
+View process status.
+
+Examples:
+ps -ef
+ps aux
+
+---
+
+4. Check CPU cores:
+nproc
+lscpu
+
+---
+
+5. Kill high CPU process:
+kill PID
+kill -9 PID (force)
+
+---
+
+6. Load average:
+uptime
+
