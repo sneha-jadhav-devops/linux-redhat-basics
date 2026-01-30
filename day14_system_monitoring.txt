@@ -1,0 +1,122 @@
+DAY 14 – SYSTEM MONITORING & RESOURCE ANALYSIS
+
+Why monitoring is important?
+Monitoring ensures system health, availability, and performance.
+Without monitoring, issues are discovered only after failures.
+
+DevOps engineers monitor systems to:
+- Prevent downtime
+- Detect performance issues
+- Scale infrastructure
+- Maintain SLAs
+
+---
+
+1. What is System Monitoring?
+System monitoring is the process of observing
+CPU, memory, disk, network, and processes
+to ensure optimal performance.
+
+---
+
+2. Key System Resources
+
+CPU     → processing power
+Memory  → running applications
+Disk    → storage usage
+Network → data transfer
+Process → running services
+
+---
+
+3. CPU Monitoring Basics
+
+High CPU usage causes:
+- Slow applications
+- Delays
+- Service timeouts
+
+Key terms:
+User time
+System time
+Idle time
+Load average
+
+---
+
+4. Load Average Explained
+
+Load average shows:
+- Number of processes waiting for CPU
+
+Examples:
+1.00 → 1 CPU fully used
+2.00 → CPU overloaded (on 1 core)
+
+---
+
+5. Memory Monitoring Basics
+
+Memory issues cause:
+- Slowness
+- Application crashes
+- OOM kills
+
+Types:
+Used memory
+Free memory
+Cached memory
+Swap memory
+
+---
+
+6. Disk Monitoring Basics
+
+Disk issues cause:
+- Application failures
+- Database crashes
+- Log write failures
+
+Important metrics:
+Disk usage %
+Inode usage
+Read/write latency
+
+---
+
+7. Process Monitoring
+
+Processes consume CPU and memory.
+Runaway processes can crash systems.
+
+---
+
+8. Monitoring in DevOps Lifecycle
+
+Development → capacity planning
+Testing → performance testing
+Production → live monitoring
+Incident → root cause analysis
+
+---
+
+9. Manual vs Automated Monitoring
+
+Manual:
+top, free, df
+
+Automated:
+Prometheus
+Grafana
+CloudWatch
+Datadog
+Nagios
+
+---
+
+10. Monitoring Best Practices
+
+- Monitor trends, not just spikes
+- Set alerts
+- Automate checks
+- Document incidents
