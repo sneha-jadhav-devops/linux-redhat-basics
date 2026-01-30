@@ -1,0 +1,125 @@
+DAY 13 – LOG MANAGEMENT & LOG ROTATION
+
+Why logs are important?
+Logs record everything happening inside a system or application.
+DevOps engineers rely on logs for troubleshooting,
+monitoring, auditing, and security.
+
+If logs are not managed properly,
+they can fill disk and crash servers.
+
+---
+
+1. What are Logs?
+Logs are text records of system events,
+errors, warnings, and application activity.
+
+---
+
+2. Common Linux Log Locations
+
+/var/log/messages     → system messages
+/var/log/syslog       → general system logs
+/var/log/auth.log     → authentication logs
+/var/log/secure       → security logs (RHEL)
+/var/log/dmesg        → kernel messages
+/var/log/cron         → cron job logs
+
+---
+
+3. Types of Logs
+
+System logs
+Application logs
+Security logs
+Access logs
+Error logs
+
+---
+
+4. Log File Characteristics
+
+- Logs grow continuously
+- Plain text files
+- Can consume large disk space
+- Must be rotated and archived
+
+---
+
+5. Basic Log Viewing Commands
+
+cat file.log        → view full log
+less file.log       → scroll logs
+tail file.log       → last lines
+tail -f file.log    → live log monitoring
+grep ERROR file.log → search errors
+
+---
+
+6. Log Rotation
+
+Log rotation prevents logs from growing endlessly.
+
+Old logs are:
+- Renamed
+- Compressed
+- Deleted after retention period
+
+Linux tool:
+logrotate
+
+---
+
+7. What is logrotate?
+logrotate is a Linux utility that manages log files.
+
+It runs automatically using cron.
+
+---
+
+8. logrotate Configuration Locations
+
+Main config:
+ /etc/logrotate.conf
+
+App-specific configs:
+ /etc/logrotate.d/
+
+---
+
+9. logrotate Options (IMPORTANT)
+
+daily           → rotate daily
+weekly          → rotate weekly
+monthly         → rotate monthly
+rotate 7        → keep 7 old logs
+compress        → gzip old logs
+missingok       → ignore missing logs
+notifempty      → skip empty logs
+create          → create new log file
+copytruncate    → truncate original file
+
+---
+
+10. Why copytruncate?
+Used when services cannot reopen logs.
+
+---
+
+11. Real DevOps Scenarios
+
+- Web server logs growing fast
+- Disk full issues
+- Compliance log retention
+- Security audits
+- Performance troubleshooting
+
+---
+
+12. Best Practices
+
+- Always rotate logs
+- Compress old logs
+- Monitor disk usage
+- Keep retention policy
+- Test logrotate configs
