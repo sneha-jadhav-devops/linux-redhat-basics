@@ -87,6 +87,12 @@ required for real-world DevOps and cloud environments.
 - logrotate configuration
 - Disk safety automation
 
+### Day 14: System Monitoring
+- CPU, memory, disk monitoring
+- Process analysis
+- Load average concepts
+- Health check automation
+
 ---
 
 ## 🛠 Tools & Technologies
