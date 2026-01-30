@@ -1,0 +1,20 @@
+DAY 13 – LOG MANAGEMENT PRACTICE
+
+1. View system logs:
+tail /var/log/messages
+tail /var/log/syslog
+
+2. Live log monitoring:
+tail -f /var/log/syslog
+
+3. Search errors:
+grep error /var/log/syslog
+
+4. Check log size:
+du -sh /var/log/*
+
+5. Find largest logs:
+ls -lh /var/log
+
+6. Check disk usage:
+df -h
