@@ -1,0 +1,36 @@
+DAY 14 – MEMORY MONITORING
+
+1. free
+Shows memory usage.
+
+Command:
+free -h
+
+Fields:
+total
+used
+free
+shared
+buff/cache
+available
+
+---
+
+2. vmstat
+Shows memory, CPU, IO stats.
+
+Example:
+vmstat 2
+
+---
+
+3. Check swap usage:
+swapon --show
+
+---
+
+4. Clear cache (rarely used):
+sync; echo 3 > /proc/sys/vm/drop_caches
+
+Note:
+Use only for testing, not production.
